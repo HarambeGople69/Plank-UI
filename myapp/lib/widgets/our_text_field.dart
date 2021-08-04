@@ -12,25 +12,33 @@ class OurTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-          border: InputBorder.none,
-          fillColor: Colors.grey.withOpacity(0.1),
-          filled: true,
-          contentPadding: EdgeInsets.symmetric(
-            vertical: ScreenUtil().setSp(10),
-            horizontal: ScreenUtil().setSp(10),
-          ),
-          suffixIcon: Icon(
-            icon,
-            size: ScreenUtil().setSp(
-              25,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(
+          ScreenUtil().setSp(20),
+        ),
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+            border: InputBorder.none,
+            // fillColor: Colors.grey.withOpacity(0.1),
+            // filled: true,
+            contentPadding: EdgeInsets.symmetric(
+              vertical: ScreenUtil().setSp(10),
+              horizontal: ScreenUtil().setSp(10),
             ),
-          ),
-          labelText: title,
-          labelStyle: TextStyle(
-            fontSize: ScreenUtil().setSp(20),
-          )),
+            suffixIcon: Icon(
+              icon,
+              size: ScreenUtil().setSp(
+                25,
+              ),
+            ),
+            labelText: title,
+            labelStyle: TextStyle(
+              fontSize: ScreenUtil().setSp(20),
+            )),
+      ),
     );
   }
 }

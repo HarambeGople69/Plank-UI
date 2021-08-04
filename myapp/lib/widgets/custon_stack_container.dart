@@ -32,7 +32,7 @@ class CustonStack extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Color(0xffeaefeb),
                   borderRadius: BorderRadius.circular(
-                    ScreenUtil().setSp(40),
+                    ScreenUtil().setSp(35),
                   ),
                 ),
                 height: ScreenUtil().setSp(150),

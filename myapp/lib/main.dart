@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/pages/home_page.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
+void main() {
+  runApp(MyApp());
+}
 
-void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => MyApp(), // Wrap your app
-      ),
-    );
+// void main() => runApp(
+//       DevicePreview(
+//         enabled: !kReleaseMode,
+//         builder: (context) => MyApp(), // Wrap your app
+//       ),
+//     );
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
         // designSize: Size(1080, 1920),
         builder: () => MaterialApp(
-              locale: DevicePreview.locale(context), // Add the locale here
-              builder: DevicePreview.appBuilder,
+              // locale: DevicePreview.locale(context), // Add the locale here
+              // builder: DevicePreview.appBuilder,
               // theme: ThemeData(primarySwatch: Colors.amber),
               debugShowCheckedModeBanner: false,
               home: HomePage(),

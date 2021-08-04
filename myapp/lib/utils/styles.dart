@@ -16,5 +16,7 @@ final blackStyle = TextStyle(
   ),
 );
 
-final smallWhite =
-    TextStyle(color: Colors.white, fontSize: ScreenUtil().setSp(15));
+final smallWhite = TextStyle(
+  color: Colors.white,
+  fontSize: ScreenUtil().setSp(25),
+);

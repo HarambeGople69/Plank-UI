@@ -38,10 +38,10 @@ class _DetailPageState extends State<DetailPage> {
             Positioned(
               bottom: 0,
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.5,
+                height: MediaQuery.of(context).size.height * 0.6,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                    color: Color(0xff57855e),
+                    color: Color(0xff79b582),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(ScreenUtil().setSp(50)),
                       topRight: Radius.circular(
@@ -70,8 +70,8 @@ class _DetailPageState extends State<DetailPage> {
                       Text(
                         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an ",
                         style: TextStyle(
-                          fontSize: ScreenUtil().setSp(15),
-                          color: Colors.grey,
+                          fontSize: ScreenUtil().setSp(17),
+                          color: Colors.black54,
                         ),
                       ),
                       OurSizedBox(),
@@ -108,54 +108,78 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ),
             Positioned(
-              bottom: ScreenUtil().setSp(250),
-              right: -ScreenUtil().setSp(20),
+              bottom: ScreenUtil().setSp(350),
+              right: ScreenUtil().setSp(50),
               // left: -ScreenUtil().setSp(120),
               child: Image.asset(
                 widget.imageUrl,
-                height: ScreenUtil().setSp(400),
-                width: ScreenUtil().setSp(400),
+                height: ScreenUtil().setSp(300),
+                width: ScreenUtil().setSp(300),
                 fit: BoxFit.cover,
               ),
             ),
             Positioned(
               right: ScreenUtil().setSp(30),
-              bottom: ScreenUtil().setSp(300),
+              bottom: ScreenUtil().setSp(360),
               child: CustomIcon(
                 icon: Icons.share,
               ),
             ),
             Positioned(
                 right: ScreenUtil().setSp(30),
-                bottom: ScreenUtil().setSp(180),
+                bottom: ScreenUtil().setSp(230),
                 child: Column(
                   children: [
-                    Container(
-                      color: Color(0xff7ea383),
-                      child: IconButton(
+                    SizedBox(
+                      width: ScreenUtil().setSp(40),
+                      height: ScreenUtil().setSp(40),
+                      // color: Color(0xff7ea383),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            Color(0xff7ea383),
+                          ),
+                          padding: MaterialStateProperty.all(
+                            EdgeInsets.zero,
+                          ),
+                        ),
                         onPressed: () {},
-                        icon: Icon(
+                        child: Icon(
                           Icons.add,
-                          color: Colors.white,
+                          size: ScreenUtil().setSp(
+                            30,
+                          ),
                         ),
                       ),
                     ),
-                    Text(
-                      '1',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: ScreenUtil().setSp(20)),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '1',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: ScreenUtil().setSp(20)),
+                      ),
                     ),
-                    Container(
-                      color: Color(0xff7ea383),
-                      child: IconButton(
+                    SizedBox(
+                      width: ScreenUtil().setSp(40),
+                      height: ScreenUtil().setSp(40),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            Color(0xff7ea383),
+                          ),
+                          padding: MaterialStateProperty.all(
+                            EdgeInsets.zero,
+                          ),
+                        ),
                         onPressed: () {},
-                        icon: Icon(
+                        child: Icon(
                           Icons.remove,
                           color: Colors.white,
                         ),
                       ),
-                    ),
+                    )
                   ],
                 )),
           ],

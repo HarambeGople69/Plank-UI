@@ -16,14 +16,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff57855e),
+      backgroundColor: Color(0xff79b582),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: ScreenUtil().setSp(20)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
+              Container(
+                margin: EdgeInsets.only(right: 30),
                 child: Image.asset(
                   "assets/flower2.png",
                   height: ScreenUtil().setSp(

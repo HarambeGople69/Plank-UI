@@ -27,6 +27,16 @@ class _OurShopState extends State<OurShop> {
         leading: Icon(
           Icons.menu,
         ),
+        title: Text(
+          "Our Shop",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: ScreenUtil().setSp(
+              30,
+            ),
+          ),
+        ),
+        centerTitle: true,
         actions: [
           CircleAvatar(
             radius: ScreenUtil().setSp(
@@ -53,7 +63,6 @@ class _OurShopState extends State<OurShop> {
               ),
               OurSizedBox(),
               Container(
-                // color: Colors.red,
                 child: Container(
                   height: ScreenUtil().setSp(300),
                   width: ScreenUtil().setSp(500),
@@ -61,14 +70,13 @@ class _OurShopState extends State<OurShop> {
                     clipBehavior: Clip.none,
                     children: [
                       Positioned(
-                        // top: ScreenUtil().setSp(20),
                         right: 0,
                         child: Container(
                           alignment: Alignment.topCenter,
                           decoration: BoxDecoration(
-                              color: Color(0xff57855e),
+                              color: Color(0xff79b582),
                               borderRadius: BorderRadius.circular(
-                                ScreenUtil().setSp(50),
+                                ScreenUtil().setSp(35),
                               )),
                           height: ScreenUtil().setSp(300),
                           width: ScreenUtil().setSp(300),
@@ -87,7 +95,7 @@ class _OurShopState extends State<OurShop> {
                                 "🌟 4.9(541)",
                                 style: TextStyle(
                                   fontSize: ScreenUtil().setSp(20),
-                                  color: Colors.grey.withOpacity(1),
+                                  color: Color(0xff759b7b),
                                 ),
                               ),
                               OurSizedBox(),
@@ -107,17 +115,25 @@ class _OurShopState extends State<OurShop> {
                       Positioned(
                         bottom: ScreenUtil().setSp(20),
                         right: ScreenUtil().setSp(20),
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                              Colors.white,
+                        child: SizedBox(
+                          width: ScreenUtil().setSp(30),
+                          height: ScreenUtil().setSp(30),
+                          child: Center(
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.zero),
+                                backgroundColor: MaterialStateProperty.all(
+                                  Colors.white,
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: ScreenUtil().setSp(25),
+                              ),
                             ),
-                          ),
-                          onPressed: () {},
-                          child: Icon(
-                            Icons.add,
-                            color: Colors.black,
-                            size: ScreenUtil().setSp(25),
                           ),
                         ),
                       )

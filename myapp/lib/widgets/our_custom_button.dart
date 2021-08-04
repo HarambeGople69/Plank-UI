@@ -14,7 +14,7 @@ class OurCustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: ScreenUtil().setSp(50),
+      height: ScreenUtil().setSp(60),
       width: double.infinity,
       child: ElevatedButton(
           style: ButtonStyle(
